@@ -1,2 +1,3 @@
 com\mycompany\socketudp\UDPServer.class
+MySQLConnection.class
 com\mycompany\socketudp\UDPClient.class
