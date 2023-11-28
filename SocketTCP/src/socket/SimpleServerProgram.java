@@ -18,18 +18,13 @@ public class SimpleServerProgram {
        BufferedReader is;
        BufferedWriter os;
        Socket socketOfServer = null;
- 
-       // Mở một ServerSocket tại cổng 9999.
-       // Chú ý bạn không thể chọn cổng nhỏ hơn 1023 nếu không là người dùng
-       // đặc quyền (privileged users (root)).
+
        try {
+
+           // Mở một ServerSocket tại cổng 9999.
+           // Chú ý bạn không thể chọn cổng nhỏ hơn 1023 nếu không là người dùng đặc quyền (privileged users (root)).
            listener = new ServerSocket(9999);
-       } catch (IOException e) {
-           System.out.println(e);
-           System.exit(1);
-       }
- 
-       try {
+
            System.out.println("Server is waiting to accept user...");
  
  
