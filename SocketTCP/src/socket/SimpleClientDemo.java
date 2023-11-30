@@ -49,7 +49,7 @@ public class SimpleClientDemo {
            String responseLine;
            while ((responseLine = is.readLine()) != null) {
                System.out.println("Server: " + responseLine);
-               if (responseLine.indexOf("OK") != -1) {
+               if (responseLine.contains("OK")) {
                    break;
                }
            }
