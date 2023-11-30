@@ -3,7 +3,8 @@ package socket;
 
 import java.io.*;
 import java.net.*;
- 
+import java.util.Scanner;
+
 public class SimpleClientDemo {
  
    public static void main(String[] args) {
@@ -36,16 +37,13 @@ public class SimpleClientDemo {
  
        try {
            // Ghi dữ liệu vào luồng đầu ra của Socket tại Client.
-           os.write("HELO");
+           Scanner sc = new Scanner(System.in);
+           System.out.println("Input your message:");
+           String message = sc.nextLine();
+           os.write(message);
            os.newLine(); // kết thúc dòng
            os.flush();  // đẩy dữ liệu đi.
-           os.write("I am Tom Cat");
-           os.newLine();
-           os.flush();
-           os.write("QUIT");
-           os.newLine();
-           os.flush();
- 
+
            // Đọc dữ liệu trả lời từ phía server
            // Bằng cách đọc luồng đầu vào của Socket tại Client.
            String responseLine;

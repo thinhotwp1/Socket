@@ -52,7 +52,7 @@ public class SimpleServerProgram {
  
                // Ghi vào luồng đầu ra của Socket tại Server.
                // (Nghĩa là gửi tới Client).
-               os.write(">> " + line);
+               os.write(">> " + line.toUpperCase());
                // Kết thúc dòng
                os.newLine();
                // Đẩy dữ liệu đi
